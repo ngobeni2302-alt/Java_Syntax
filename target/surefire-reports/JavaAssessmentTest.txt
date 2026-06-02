@@ -1,0 +1,67 @@
+-------------------------------------------------------------------------------
+Test set: JavaAssessmentTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec <<< FAILURE!
+JavaAssessmentTest.testLoadSheddingSchedule()  Time elapsed: 0.007 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <4> but was: <0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at JavaAssessmentTest.testLoadSheddingSchedule(JavaAssessmentTest.java:42)
+
+JavaAssessmentTest.testComputeFare()  Time elapsed: 0 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Failed on distance=10, passengers=2 ==> expected: <45> but was: <28>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+	at JavaAssessmentTest.testComputeFare(JavaAssessmentTest.java:54)
+
+JavaAssessmentTest.testAtmWithdrawal()  Time elapsed: 0.005 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Success: Withdrawal approved> but was: <>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at JavaAssessmentTest.testAtmWithdrawal(JavaAssessmentTest.java:64)
+
+JavaAssessmentTest.testCheckStudentPass()  Time elapsed: 0 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Failed exactly at 60% mark boundary ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at JavaAssessmentTest.testCheckStudentPass(JavaAssessmentTest.java:75)
+
+JavaAssessmentTest.testFizzBuzzSa()  Time elapsed: 0 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1
+2
+Zulu
+4
+Xhosa
+Zulu
+7
+8
+Zulu
+Xhosa
+11
+Zulu
+13
+14
+Eleven
+> but was: <>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at JavaAssessmentTest.testFizzBuzzSa(JavaAssessmentTest.java:30)
+
