@@ -13,7 +13,19 @@ public class JavaAssessment {
     // - Otherwise, print the number itself
     public static void fizzBuzzSa(int n) {
         // TODO: Write a loop counting from 1 to n and add your conditional logic here
-
+        for (int i = 1; i <= n; i++){
+            if (i == 1 || i == 2){
+                System.out.println(i);
+            } else if (i % 3 == 0 && i % 5 == 0){
+                System.out.println("Eleven");
+            } else if (i % 5 == 0 && i % 3 != 0) {
+                System.out.println("Xhosa");
+            } else if (i % 3 == 0 && i % 5 != 0) {
+                System.out.println("Zulu");
+            } else {
+                System.out.println(i);
+            }
+        }
     }
 
     // =========================================================================
@@ -28,7 +40,11 @@ public class JavaAssessment {
 
         // TODO: Use a loop to scan 'hours'. If an hour matches peak times, add it
         // to peakHours using peakHours.add(hour);
-
+        for (int hour : hours) {
+            if (hour >= 6 && hour <= 9 || hour >= 17 && hour <= 21) {
+                peakHours.add(hour);
+            }
+        }
         return peakHours;
     }
 
@@ -49,15 +65,16 @@ public class JavaAssessment {
         int perKm = 3;
 
         // TODO: Fix the math and assignment bugs below to make the output calculations match perfectly
-        int total = base + perKm + distance;
+        int total = base + (perKm * distance);
 
-        if (passengers >= 3) {
+        if (passengers > 3) {
             int extra = passengers - 3;
-            int charge = extra + 5;
+            int charge = extra * 5;
             total = total + charge;
         }
 
         if (total < 20) {
+            total = 20;
             // total == 20; // This doesn't assign values in Java! Fix this assignment line.
         }
 
@@ -78,8 +95,13 @@ public class JavaAssessment {
     // "Error: Insufficient funds" (if remaining balance drops below R100)
     public static String atmWithdrawal(int balance, int amount) {
         // TODO: Implement the conditional validation rules here
-
-        return "";
+        if (amount <=0 || amount % 50 != 0){
+            return "Error: Invalid amount";
+        } else if (balance - amount <= 99) {
+            return "Error: Insufficient funds";
+        } else {
+           return "Success: Withdrawal approved";
+        }
     }
 
     // =========================================================================
@@ -89,30 +111,26 @@ public class JavaAssessment {
     // - Attendance must be at least 80% (>= 80)
     // - Average mark must be 60% or above (>= 60)
     // - Student must have submitted ALL assignments
-    public static boolean checkStudentPass(int attendance, int averageMark, int assignmentsSubmitted, int totalAssignments) {
-        /*
-         * Bugs to fix from the original broken logic:
-         * 1. Evaluated average mark incorrectly (used '>' instead of '>=')
-         * 2. Integer division trap: dividing an int by an int drops decimal data.
-         * 3. Evaluation criteria bug: 'if not submitted_all:' expects a boolean, but got a numeric fraction result.
-         */
-        boolean passedAttendance = attendance >= 80;
-        boolean passedMark = averageMark > 60;
-
-        // TODO: Fix the calculation assignment below to properly check if all assignments were submitted
-        // Hint: In Java, comparing assignmentsSubmitted directly to totalAssignments is safer than division!
-        double submittedAll = assignmentsSubmitted / totalAssignments;
-
-        if (!passedAttendance) {
-            return false;
-        }
-        if (!passedMark) {
-            return false;
-        }
-        // if (!submittedAll) { // This will crash in Java because submittedAll isn't a boolean!
-        //     return false;
-        // }
-
-        return true;
+//    public static boolean checkStudentPass(int attendance, int averageMark, int assignmentsSubmitted, int totalAssignments) {
+//        /*
+//         * Bugs to fix from the original broken logic:
+//         * 1. Evaluated average mark incorrectly (used '>' instead of '>=')
+//         * 2. Integer division trap: dividing an int by an int drops decimal data.
+//         * 3. Evaluation criteria bug: 'if not submitted_all:' expects a boolean, but got a numeric fraction result.
+//         */
+//        boolean passedAttendance = attendance >= 80;
+//        boolean passedMark = averageMark >= 60;
+//
+//        // TODO: Fix the calculation assignment below to properly check if all assignments were submitted
+//        // Hint: In Java, comparing assignmentsSubmitted directly to totalAssignments is safer than division!
+//        double submittedAll = assignmentsSubmitted / totalAssignments;
+//
+//        if (!passedAttendance) {
+//            return false;
+//        }
+//        return passedMark;
+//        // if (!submittedAll) { // This will crash in Java because submittedAll isn't a boolean!
+//        //     return false;
+//        // }
     }
 }
